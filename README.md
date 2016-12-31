@@ -12,7 +12,7 @@ It also supports following languages used for plaintext scoring :
 -	German
 -	Spanish
 
-*Quadgram statistics for the above languages are generated from <a href="http://practicalcryptography.com/">practicalcryptography.com</a><br>.
+*Quadgram statistics for the above languages are generated from <a href="http://practicalcryptography.com/">practicalcryptography.com</a> and compressed using <a href="https://github.com/liftoff/pyminifier">pyminifier</a>.
 
 # Installation
 
