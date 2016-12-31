@@ -1,0 +1,4 @@
+*.pyc
+ref/
+blasto.egg-info/
+build/
