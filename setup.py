@@ -11,7 +11,7 @@ long_description = open(
 
 setup(
 	name='blasto',
-	version='0.1.0',
+	version='0.1.3',
 	description='A Python implementation of Hill-Climbing for cracking classic ciphers',
 	url='https://github.com/merricx/blasto',
 	author='Merricx',

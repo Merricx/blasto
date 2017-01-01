@@ -9,7 +9,7 @@
 import argparse, sys, curses, time, random, re
 import modules.core as core
 
-version = "v0.1.0"
+version = "v0.1.3"
 
 def args_parse():
 
@@ -142,7 +142,7 @@ if __name__ == "__main__":
 				stdscr.addstr(12,0,"Best key   = ")
 				stdscr.addstr(12,14,result['key'],curses.A_BOLD)
 				stdscr.addstr(14,0,"Plain text :")
-				short_plain = result['plain']
+				short_plain = re.sub("\s+"," ",result['plain'])
 				if len(result['plain']) > 450:
 					short_plain = result['plain'][0:450] + "...."
 				stdscr.addstr(15,0,short_plain, curses.A_BOLD)
@@ -160,6 +160,16 @@ if __name__ == "__main__":
 		else:
 			args.o.write(best_plain)
 			print "Plain text saved in \"" + args.o.name + "\"."
+	except curses.error:
+		curses.nocbreak()
+		curses.echo()
+		curses.endwin()
+		print "[ERROR]: Windows size is too small"
+	except ImportError:
+		curses.nocbreak()
+		curses.echo()
+		curses.endwin()
+		print "[ERROR]: Couldn't import modules."
 	except:
 		curses.nocbreak()
 		curses.echo()
