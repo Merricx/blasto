@@ -160,8 +160,8 @@ if __name__ == "__main__":
 		else:
 			args.o.write(best_plain)
 			print "Plain text saved in \"" + args.o.name + "\"."
-	#except:
-	#	curses.nocbreak()
-	#	curses.echo()
-	#	curses.endwin()
-	#	print "[ERROR]: Unexpected error."
+	except:
+		curses.nocbreak()
+		curses.echo()
+		curses.endwin()
+		print "[ERROR]: Unexpected error."
