@@ -28,7 +28,7 @@ setup(
 		"Intended Audience :: Information Technology",
 		"Intended Audience :: Science/Research",
 		"Topic :: Scientific/Engineering :: Mathematics",
-        "Topic :: Security :: Cryptography",
-        "License :: Public Domain"
+        	"Topic :: Security :: Cryptography",
+        	"License :: MIT License"
 	]
 )
